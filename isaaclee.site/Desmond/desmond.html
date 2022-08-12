@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Tangerine&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="desmond.css">
+    <title>Desmond | Exocist Cardgame</title>
+</head>
+<body>
+<div id="main">
+    <!-- Main Menu -->
+    <div id="gameInstructions" class="hide">
+        <div class="infoBox">
+            <img src="/images/gameinfo.png" alt="">
+        </div>
+    </div>
+    <div id="gameStartMenu" class="">
+        <div id="selectGame">
+            <div class="box title">
+                <h1>Desmond</h1>
+                <h5>The Exocist</h5>
+            </div>
+            <div id="episodeOne" class="box select"><h1>Episode I</h1></div>
+            <div id="episodeTwo" class="box select"><h1>Episode II</h1></div>
+            <div id="episodeThree" class="box select"><h1>Episode III</h1></div>
+        </div>
+    </div>
+
+    <!-- Active Game -->
+
+    <div id="active" class="hide">
+        <div id="combat" class="hide">
+            <div id="foeHP" class="lifeBar">
+                <div id="hpBar" class="hide"></div>
+            </div>
+            <div id="foeFP" class="lifeBar">
+                <div id="fpBar" class="hide"></div>
+            </div>
+        </div>
+        <div id="episodeOneStart" class="intro hide">
+            <div class="textbox">
+                <h4>Desmond's Study at Cold Spring New York</h4>
+                <h4>October 25th, 2020</h4>
+                <p>It was a nearly 2am, and Desmond was thinking of calling it quits. </p>
+                <p>Exocism had finally dried up, no more money in it anymore. </p>
+                <p>Desmond had always figured it as an easy scam that couldn't really hurt anyone.</p>
+                <p>...But, now nobody belived in this stuff...not even himself. </p>
+                <p>Desmond was about to fall alseep when he heard a sinister whisper from outside.</p>
+                <p>He grabbed his old-fashioned pistol and pointed at his front door.</p>
+                <p>"Who goes there?!?" he shouted.</p>
+                <p>The door started to shake on its hinges, stressing under the force from outsite.</p>
+                <p>...Maybe it was just a burgler?</p>
+                <br>
+                <p>Then again, he could be on the radar of...other things</p>
+                <p>Desmond grabbed a flask from his desk.</p>
+                <p>"Good thing holy water is cheap these days", he thought to himself.</p>
+                <br>
+                <h4 class="next">Continue</h4 c>
+            </div>
+        </div>
+        <div id="episodeTwoStart" class="intro hide">
+            <div class="textbox">
+                <h4>Saint Bernard's Cathedral at Cold Spring New York</h4>
+                <h4>November 13th, 2020</h4>
+                <p>Desmond arrived at Staint Bernard's shortly before Midnight.</p>
+                <p>Since the first attack, Desmond was looking for explainations.</p>
+                <p>After two weeks of digging, Desmond found a contact.</p>
+                <p>Father Samuel said he knew about the person behind his..."visitation".</p>
+                <br>
+                <p>12:15am and Desmond knew something was off.</p>
+                <p>No sign of the pastor and something occured on him.</p>
+                <p>He hadn't bothered to check if the contact was legit.</p>
+                <p>Desmond pulled out his phone and started a google search.</p>
+                <p>The page loaded."Did you mean:..", Desmond read before he saw his company.</p>
+                <p>A black hooded figure stepped out of the shadows with a baseball bat.</p>
+                <br>
+                <p>Man or Monster, which was worst? Desmond reached for his gun.</p>
+                <h4 class="next">Continue</h4 c>
+            </div>
+        </div>
+        <div id="episodeThreeStart" class="intro hide">
+            <div class="textbox">
+                <h4>Califer's Forest, 30 miles from Cold Spring New York</h4>
+                <h4>December 1st, 2020</h4>
+                <p>3am and Desmond was freezing.</p>
+                <p>He knew the Cult's "Housekeeper" was going to be somewhere out here.</p>
+                <p>Desmond checked his notes once more and confirmed the date.</p>
+                <p>Then he took a long look at the old cabin.</p>
+                <p>"Pefect place to get murdered", he muttered to himself.</p>
+                <p>He pushed on the cabin door and it creaked open.</p>
+                <br>
+                <p>It was empty. Completley empty. Desmond sighed with relief.</p>
+                <p>Maybe it was a myth to keep the cult in line.</p>
+                <p>He stepped outside and started to walk back toward his car.</p>
+                <br>
+                <p>On the road a ahead, a stranger stood. Facing away.</p>
+                <p>"About time", growled he stranger.</p>
+                <p>"Time to end this", Desmond whispered.</p>
+                <h4 class="next">Continue</h4 c>
+            </div>
+        </div>
+        <div id="gamecontrol">
+        <div id="profile">
+            <h4>Desmond Elderwood</h4>
+        </div>
+        <div id="cardHand">    
+            <div class="cardSlot" data-slotnumber="0"></div>
+            <div class="cardSlot" data-slotnumber="1"></div>
+            <div class="cardSlot" data-slotnumber="2"></div>
+            <div class="cardSlot" data-slotnumber="3"></div>       
+        </div>
+        <div id="status">
+            <div id="health">100 / 100</div>
+        </div>
+        </div>
+        <h4 class="infoBtn">Game Instructions</h4>
+    </div>
+    <div id="defeat" class="hide">
+        <h1>You died.</h1>
+        <p>Click anywhere to continue</p>
+    </div>
+    <div id="victory" class="hide">
+        <h1>You are victorious.</h1>
+        <p>Click anywhere to continue</p>
+    </div>
+<audio id="audioPlay" autoplay="true" src="/audio/menu.mp3"></audio>
+    <!-- End of Mainbox -->
+</div> 
+</body>
+<script src="desmond.js">
+</script>
+</html>

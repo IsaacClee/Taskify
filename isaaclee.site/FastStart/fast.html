@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fast Start</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background: url(background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#hideBtn {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid darkgreen;
+    position: fixed;
+    top: 1vh;
+    right: 2vh;
+    cursor: pointer;
+  }
+
+label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 1rem;
+    width: 30%;
+    padding-left: 3rem;
+}
+
+input {
+    font-size: 1.5rem;
+    margin: 1rem 2rem 1rem 0rem;
+    cursor: pointer;
+    width: 10%;
+}
+
+input.file {
+    width: 20%;
+    margin: auto;
+}
+
+input.checkbox {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+.checkbox-label {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+select {
+    font-size: 1.5rem;
+    margin: 1rem 2rem 1rem 0rem; 
+    cursor: pointer;
+}
+
+textarea {
+    overflow: hidden;
+    margin: auto;
+}
+
+.textarea-label {
+    margin: 1rem auto;
+    display: inline-block;
+}
+
+button {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: #222222;
+    color: white;
+    border: 0.2rem solid black;
+    border-radius: 1rem; 
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+.container {
+    width: 80vw;
+    border: 0.2rem solid black;
+    border-radius: 0.4rem;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: lightgray;
+}
+
+.title {
+    font-size: 6rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: Helvetica;
+    margin: 1rem;
+    display: block;
+}
+
+.section {
+    background-color: lightgray;
+    width: 100%;
+    border-bottom: 0.05rem solid black;
+    border-top: 0.05rem solid black;
+    text-align: center;
+    height: auto;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.subsection {
+    background-color: lightseagreen;
+    width: 100%;
+    border-bottom: 0.05rem solid black;
+    text-align: center;
+    height: auto;
+    font-size: 2.5rem;
+}
+
+.row {
+    width: 100%;
+    background-color: lightseagreen;
+    border-bottom: 0.05rem solid black;
+    text-align: center;
+}
+
+.row:hover {
+    background-color: darkorange;
+}
+
+.spacer {
+    min-height: 3vh;
+    border-bottom: 0.05rem solid black;
+    text-align: center;
+}
+
+
+.list-item {
+    font-size: 1.5rem;
+    height: auto;
+    width: 25%;
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 0.1rem;
+}
+
+.hide {
+    display: none;
+}
+    </style>
+</head>
+<body>
+    <div id="hideBtn">
+    </div>
+    <div class="container" id="control">
+        <div class="row">
+            <div class="title">Fast Start</div>
+            <input class="file" type="file" id="fileinput">
+        </div>
+        <div class="spacer"></div>
+        <div class="row">
+            <label class="checkbox-label" for="DA5">Team 1</label>
+            <input class="checkbox" type="checkbox" id="DA5" name="DA5">
+            <label class="checkbox-label" for="DA6">Team 2</label>
+            <input class="checkbox" type="checkbox" id="DA6" name="DA6">
+            <label class="checkbox-label" for="DC1">Team 3</label>
+            <input class="checkbox" type="checkbox" id="DC1" name="DC1">
+            <label class="checkbox-label" for="DC7">Team 4</label>
+            <input class="checkbox" type="checkbox" id="DC7" name="DC7">
+            <label class="checkbox-label" for="DB1">Team 5</label>
+            <input class="checkbox" type="checkbox" id="DB1" name="DB1">
+            <label class="checkbox-label" for="DB2">Team 6</label>
+            <input class="checkbox" type="checkbox" id="DB2" name="DB2">
+        </div>
+        <div class="spacer"></div>
+        <div class="row">            
+            <label for="numIBDOCK">IB Dock</label>
+            <input type="number" id="numIBDOCK" name="numIBDOCK" min="0" max="99">
+            
+            <label for="numOBDOCK">OB Dock</label>
+            <input type="number" id="numOBDOCK" name="numOBDOCK" min="0" max="99">
+            
+            <label for="numSTOW">STOW</label>
+            <input type="number" id="numSTOW" name="numSTOW" min="0" max="99">
+            
+            <label for="numPICK">PICK</label>
+            <input type="number" id="numPICK" name="numPICK" min="0" max="99">
+        </div>
+        <div class="spacer"></div>
+        <div class="row">
+            <label for="OVERFLOW">OVERFLOW</label>
+            <select name="overflow" id="OVERFLOW">
+                <option value="PICK">PICK</option>
+                <option value="STOW">STOW</option>
+                <option value="ASK">Ask a Manager</option>
+            </select>
+        </div>
+        <div class="spacer"></div>
+        <div class="row">
+            <label class="textarea-label" for="VTO">VTO List (Employee ID)</label>
+            <textarea name="VTO" id="VTO" cols="30" rows="3"></textarea>
+        </div>
+        <div class="spacer"></div>
+        <div class="row">
+            <button id="button">Create Roster</button>
+        </div>
+    </div>
+    <div id="print-list" class="container">
+        <h1 class="section" id="HC"></h1>
+        <div class="row  crit-role"><div class="list-item">Name</div>
+        <div class="list-item">Login</div>
+        <div class="list-item">Role</div></div>
+        <div class="section">STOW</div>
+        <div id="STOW"></div>
+        <div class="section">PICK</div>
+        <div id="PICK"></div>
+        <div class="section">IB DOCK</div>
+        <div id="IBDOCK"></div>
+        <div class="section">OB DOCK</div>
+        <div id="OBDOCK"></div>
+        <div class="section">AUDITS</div>
+        <div id="AUDITS"></div>
+        <div class="section">PS</div>
+        <div id="PS"></div>
+        <div class="section">Ask a Manager</div>
+        <div id="ASK"></div>
+    <div id="WS"></div>
+    <div id="assignments"></div>
+    </div>  <!-- END CONTAINER  -->
+    
+    <script>
+        document.getElementById('button').addEventListener('click', loadCustomers);
+
+document.getElementById('hideBtn').addEventListener('click', function(){
+    document.getElementById('control').classList.toggle('hide');
+});
+
+
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+//LOAD customers
+/*
+This section removed to allow easy testing in a web brower. 
+Please refer to app.JS for file Upload in the absense of a database
+*/
+
+function loadCustomers(evt){
+    fetch("./test.json")
+    .then(response => {
+    return response.json();
+    })
+    .then(data => {
+        let associates = data;
+        shuffleArray(associates);
+        console.log(associates);
+        let STOW = '';
+        let numSTOW = document.getElementById('numSTOW').value;
+        let PICK = '';   
+        let numPICK = document.getElementById('numPICK').value;         
+        let IBDOCK = '';
+        let numIBDOCK = document.getElementById('numIBDOCK').value;
+        let OBDOCK = '';
+        let numOBDOCK = document.getElementById('numOBDOCK').value;
+        let AUDITS = '';
+        let PS = '';
+
+        let remainder = document.getElementById('OVERFLOW').value;
+        let ASK = '';
+        let overflow = '';
+        let singleAssign;
+        let multAssign = [];
+        let HC = '';
+
+        let DA5 = document.getElementById('DA5').checked;
+        let DA6 = document.getElementById('DA6').checked;
+        let DC1 = document.getElementById('DC1').checked;
+        let DC7 = document.getElementById('DC7').checked;
+        let DB1 = document.getElementById('DB1').checked;
+        let DB2 = document.getElementById('DB2').checked;
+
+        let VTO = document.getElementById('VTO');
+
+        VTO = VTO.value.split(/\n/);
+
+
+        ////////////////////////FILTER OUT VTO////////////////////////////////////////
+
+        for (let i = 0; i < VTO.length; i++) {
+            associates = associates.filter(function(e){ return e["Employee ID"] != VTO[i]});            
+        }
+
+
+        console.log(VTO);
+
+        
+        ////////////////////////FILTER BY SHIFT///////////////////////////////////////
+
+        if(DA5 !== true){
+            associates = associates.filter(function(e){ return e["Shift Pattern"] !== "DA5-0700"});
+        }
+        if(DA6 !== true){
+            associates = associates.filter(function(e){ return e["Shift Pattern"] !== "DA6-0700"});
+        }
+        if(DC1 !== true){
+            associates = associates.filter(function(e){ return e["Shift Pattern"] !== "DC1-0700"});
+        }
+        if(DC7 !== true){
+            associates = associates.filter(function(e){ return e["Shift Pattern"] !== "DC7-0700"});
+        }
+        if(DB1 !== true){
+            associates = associates.filter(function(e){ return e["Shift Pattern"] !== "DB1-0700"});
+        }
+        if(DB2 !== true){
+            associates = associates.filter(function(e){ return e["Shift Pattern"] !== "DB2-0700"});
+        }
+
+        
+        ////////////////////////SET ENVIROMENT////////////////////////////////////////
+        HC = `Total HeadCount: ${associates.length}`;
+
+        ///////////////////////CRITCAL ROLES//////////////////////////////////////////
+
+        ////AUDITS////
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] === "RODEO") {
+                singleAssign = associates.splice(i, 1);
+                AUDITS += `
+                <div class="row">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">Putbacks</div>
+                </div>
+                `
+                break;
+            }
+        }
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] === "RODEO") {
+                singleAssign = associates.splice(i, 1);
+                AUDITS += `
+                <div class="row">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">Putbacks</div>
+                </div>
+                `
+                break;
+            }
+        }
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] === "AUDITS") {
+                singleAssign = associates.splice(i, 1);
+                AUDITS += `
+                <div class="row">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">Missing Items</div>
+                </div>
+                `
+                break;
+            }
+        }
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] === "AUDITS") {
+                singleAssign = associates.splice(i, 1);
+                AUDITS += `
+                <div class="row">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">Missing Items</div>
+                </div>
+                `
+                break;
+            }
+        }
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] === "RODEO") {
+                singleAssign = associates.splice(i, 1);
+                AUDITS += `
+                <div class="row">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">Audits</div>
+                </div>
+                `
+                break;
+            }
+        }
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] === "RODEO") {
+                singleAssign = associates.splice(i, 1);
+                AUDITS += `
+                <div class="row">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">Audits</div>
+                </div>
+                `
+                break;
+            }
+        }
+        
+        ////PS////
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] === "PS") {
+                singleAssign = associates.splice(i, 1);
+                PS += `
+                <div class="row">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">PS Stow</div>
+                </div>
+                `
+                break;
+            }
+        }
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] === "PS") {
+                singleAssign = associates.splice(i, 1);
+                PS += `
+                <div class="row">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">PS Area</div>
+                </div>
+                `
+                break;
+            }
+        }
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] === "PS") {
+                singleAssign = associates.splice(i, 1);
+                PS += `
+                <div class="row">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">PS Dock</div>
+                </div>
+                `
+                break;
+            }
+        }            
+        
+        ////IB DOCK////
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] === "PIT") {
+                singleAssign = associates.splice(i, 1);
+                IBDOCK += `
+                <div class="row crit-role">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">PIT</div>
+                </div>
+                <div class="spacer"></div>
+                `
+                break;
+            }
+        }
+
+        ////OB DOCK////
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] === "Foreman") {
+                singleAssign = associates.splice(i, 1);
+                OBDOCK += `
+                <div class="row crit-role">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">Foreman</div>
+                </div>
+                <div class="spacer"></div>
+                `
+                break;
+            }
+        }
+
+        ////Gate Keepers////
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] == "") {
+                singleAssign = associates.splice(i, 1);
+                PICK += `
+                <div class="row crit-role">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">GateKeeper 400-500</div>
+                </div>
+                <div class="spacer"></div>
+                `
+                break;
+            }
+        }
+
+        for(let i = 0; i < associates.length; i++) {
+            if(associates[i]["Role"] == "") {
+                singleAssign = associates.splice(i, 1);
+                PICK += `
+                <div class="row crit-role">
+                <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                <div class="list-item">GateKeeper 100-200</div>
+                </div>
+                <div class="spacer"></div>
+                `
+                break;
+            }
+        }
+
+        //////////////////////////BULK ASSIGNMENTS////////////////////////////////////
+
+
+        ////IB DOCK////
+
+        for (let i = 0; i < numIBDOCK; i++) {
+            for(let i = 0; i < associates.length; i++) {
+                if(associates[i]["Role"] === "DOCK") {
+                    singleAssign = associates.splice(i, 1);
+                    IBDOCK += `
+                    <div class="row">
+                    <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                    <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                    <div class="list-item">IB DOCK</div>
+                    </div>
+                    `
+                    break;
+                }
+            }
+        } 
+        multAssign = [];  
+      
+
+        ////OB DOCK////
+        
+        for (let i = 0; i < numOBDOCK; i++) {
+            for(let i = 0; i < associates.length; i++) {
+                if(associates[i]["Role"] === "DOCK") {
+                    singleAssign = associates.splice(i, 1);
+                    OBDOCK += `
+                    <div class="row">
+                    <div class="list-item">${singleAssign[0]["Employee Name"]}</div>
+                    <div class="list-item">${singleAssign[0]["User ID"]}</div>
+                    <div class="list-item">OB DOCK</div>
+                    </div>
+                    `
+                    break;
+                }
+            }
+        } 
+
+        multAssign = [];  
+      
+
+        ////STOW////
+        
+        for (let i = 0; i < numSTOW; i++) {
+            multAssign.push(associates.splice(i, 1));
+        }            
+        multAssign.sort(function(a, b){
+            var nameA = a[0]["Employee Name"].toLowerCase(), nameB = b[0]["Employee Name"].toLowerCase()
+            if (nameA < nameB) //sort string ascending
+                return -1 
+            if (nameA > nameB)
+                return 1
+            return 0 //default return value (no sorting)
+        })
+        multAssign.forEach(function(assign){
+            STOW += `
+            <div class="row">
+            <div class="list-item">${assign[0]["Employee Name"]}</div>
+            <div class="list-item">${assign[0]["User ID"]}</div>
+            <div class="list-item">STOW</div>
+            </div>
+           `
+        });
+        multAssign = [];
+
+        ////PICK////
+        
+        for (let i = 0; i < numPICK; i++) {
+            multAssign.push(associates.splice(i, 1));
+        }            
+        multAssign.sort(function(a, b){
+            var nameA = a[0]["Employee Name"].toLowerCase(), nameB = b[0]["Employee Name"].toLowerCase()
+            if (nameA < nameB) //sort string ascending
+                return -1 
+            if (nameA > nameB)
+                return 1
+            return 0 //default return value (no sorting)
+        })
+        multAssign.forEach(function(assign){
+            PICK += `
+            <div class="row">
+            <div class="list-item">${assign[0]["Employee Name"]}</div>
+            <div class="list-item">${assign[0]["User ID"]}</div>
+            <div class="list-item">PICK</div>
+            </div>
+           `
+        });
+        multAssign = [];
+
+   
+
+        ////REMAINDER////
+
+        associates.sort(function(a, b){
+            var nameA = a["Employee Name"].toLowerCase(), nameB = b["Employee Name"].toLowerCase()
+            if (nameA < nameB) //sort string ascending
+                return -1 
+            if (nameA > nameB)
+                return 1
+            return 0 //default return value (no sorting)
+        })
+
+        console.log(remainder)
+
+        if(remainder == 'PICK'){
+            associates.forEach(function(assign){
+                    PICK += `
+                    <div class="row">
+                    <div class="list-item">${assign["Employee Name"]}</div>
+                    <div class="list-item">${assign["User ID"]}</div>
+                    <div class="list-item">PICK</div>
+                    </div>
+                    `;        
+            });
+        }
+        if(remainder == 'STOW'){
+            associates.forEach(function(assign){
+                    STOW += `
+                    <div class="row">
+                    <div class="list-item">${assign["Employee Name"]}</div>
+                    <div class="list-item">${assign["User ID"]}</div>
+                    <div class="list-item">STOW</div>
+                    </div>
+                    `;        
+            });
+        }
+        if(remainder == 'ASK'){
+            associates.forEach(function(assign){
+                    ASK += `
+                    <div class="row">
+                    <div class="list-item">${assign["Employee Name"]}</div>
+                    <div class="list-item">${assign["User ID"]}</div>
+                    <div class="list-item">ASK</div>
+                    </div>
+                    `;        
+            });
+        }
+
+
+        //DOM Placements
+        document.getElementById('STOW').innerHTML = STOW;
+        document.getElementById('PICK').innerHTML = PICK;
+        document.getElementById('IBDOCK').innerHTML = IBDOCK;
+        document.getElementById('OBDOCK').innerHTML = OBDOCK;
+        document.getElementById('AUDITS').innerHTML = AUDITS;
+        document.getElementById('PS').innerHTML = PS;
+        document.getElementById('ASK').innerHTML = ASK;
+        document.getElementById('HC').innerHTML = HC;
+        
+    
+      });
+
+}
+    </script>
+</body>
+</html>

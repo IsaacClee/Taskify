@@ -1,0 +1,160 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+body {
+    background: url(background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#hideBtn {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid darkgreen;
+    position: fixed;
+    top: 1vh;
+    right: 2vh;
+    cursor: pointer;
+  }
+
+label {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-right: 1rem;
+    width: 30%;
+    padding-left: 3rem;
+}
+
+input {
+    font-size: 1.5rem;
+    margin: 1rem 2rem 1rem 0rem;
+    cursor: pointer;
+    width: 10%;
+}
+
+input.file {
+    width: 20%;
+    margin: auto;
+}
+
+input.checkbox {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+.checkbox-label {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+select {
+    font-size: 1.5rem;
+    margin: 1rem 2rem 1rem 0rem; 
+    cursor: pointer;
+}
+
+textarea {
+    overflow: hidden;
+    margin: auto;
+}
+
+.textarea-label {
+    margin: 1rem auto;
+    display: inline-block;
+}
+
+button {
+    font-size: 2.5rem;
+    font-weight: 600;
+    padding: 1rem;
+    margin: 2rem;
+    background-color: #222222;
+    color: white;
+    border: 0.2rem solid black;
+    border-radius: 1rem; 
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkorange;
+}
+
+.container {
+    width: 80vw;
+    border: 0.2rem solid black;
+    border-radius: 0.4rem;
+    margin: auto;
+    margin-top: 2rem;
+    background-color: lightgray;
+}
+
+.title {
+    font-size: 6rem;
+    font-weight: 600;
+    text-align: center;
+    font-family: Helvetica;
+    margin: 1rem;
+    display: block;
+}
+
+.section {
+    background-color: lightgray;
+    width: 100%;
+    border-bottom: 0.05rem solid black;
+    border-top: 0.05rem solid black;
+    text-align: center;
+    height: auto;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.subsection {
+    background-color: lightseagreen;
+    width: 100%;
+    border-bottom: 0.05rem solid black;
+    text-align: center;
+    height: auto;
+    font-size: 2.5rem;
+}
+
+.row {
+    width: 100%;
+    background-color: lightseagreen;
+    border-bottom: 0.05rem solid black;
+    text-align: center;
+}
+
+.row:hover {
+    background-color: darkorange;
+}
+
+.spacer {
+    min-height: 3vh;
+    border-bottom: 0.05rem solid black;
+    text-align: center;
+}
+
+
+.list-item {
+    font-size: 1.5rem;
+    height: auto;
+    width: 25%;
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 0.1rem;
+}
+
+.hide {
+    display: none;
+}

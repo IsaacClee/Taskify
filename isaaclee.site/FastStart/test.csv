@@ -1,0 +1,8 @@
+Employee ID,User ID,Employee Name,Badge Barcode ID,Department ID,Employment Start Date,Employment Type,Employee Status,Manager Name,Temp Agency Code,Shift Pattern,JOB1
+123456789,asdlkj,"Doe,Jane",50359798,1211040,Tue Nov 05 00:00:00 UTC 2019,TEMP,Active,"Lee,Isaac Cameron",,DB2-0700,PS
+123456792,sr,"Doe,Joane",50359815,1211010,Fri Sep 27 00:00:00 UTC 2019,TEMP,Active,"Lee,Isaac Cameron",,DA6-0700,PS
+123456795,asr,"Samson,Bob",50359832,1211040,Fri Oct 18 00:00:00 UTC 2019,TEMP,Active,"Lee,Isaac Cameron",,DC1-0700,TDR
+123456798,asdf,"Pop,Sam",50359849,1211010,Sat Sep 14 00:00:00 UTC 2019,TEMP,Active,"Lee,Isaac Cameron",,DA5-0700,PIT
+123456801,wer,"Idk,Tim",50359866,1211040,Fri Oct 25 00:00:00 UTC 2019,TEMP,Active,"Lee,Isaac Cameron",,DA6-0700,AUDITS
+123456804,sasdf,"Lee,John",50359883,1211010,Sat Nov 09 00:00:00 UTC 2019,TEMP,Active,"Lee,Isaac Cameron",,DC1-0700,WS
+123456807,zxcv,"Smith,Dan",50359900,1211010,Fri Dec 13 00:00:00 UTC 2019,TEMP,Active,"Lee,Isaac Cameron",,DA6-0700,WS

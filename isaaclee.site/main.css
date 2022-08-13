@@ -275,14 +275,13 @@ a {
     background-size: cover;
 }
 
-.fast {
-    background: url(flowers.jpg) center center;
+.faststart {
+    background: url(faststart.png) center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-
 
 .example {
     background: url(flowers.jpg) center center;
@@ -1019,6 +1018,14 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 93% 97%, 85% 92% , 80% 87% , 75% 80
 
 .desmond {
     background: url(desmond-capture.jpg) center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.faststart {
+    background: url(faststart.png) center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

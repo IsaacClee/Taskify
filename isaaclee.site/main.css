@@ -275,6 +275,15 @@ a {
     background-size: cover;
 }
 
+.fast {
+    background: url(flowers.jpg) center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
 .example {
     background: url(flowers.jpg) center center;
     -webkit-background-size: cover;

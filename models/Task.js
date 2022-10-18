@@ -19,6 +19,9 @@ const TaskScheme = new Schema({
         default: 'NEW',
         required: true
     },
+    avatar: {
+        type: String
+    },
     department: {
         type: String
     },

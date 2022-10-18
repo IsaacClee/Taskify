@@ -108,6 +108,53 @@ router.delete('/:id', auth, async (req, res) => {
     }
 });
 
+// @route  PUT api/tasks/:id
+// @desc   UPDATE a task
+// @access Private
+router.put('/:id', [ auth, [
+    check('title', 'Task title is required').not().isEmpty()
+] ], async (req, res) => {
+    const errors = validationResult(req);
+
+    if(!errors.isEmpty()) {
+        return res.status(400).json( { errors: errors.array() });
+    }
+
+    const {
+        title,
+        status,
+        owner,
+        department,
+        duedate
+    } = req.body
+
+
+    const taskFields = {};
+    if (title) taskFields.title = title;
+    if (owner) taskFields.owner = owner;
+    if (department) taskFields.department = department;
+    if (duedate) taskFields.duedate = duedate;
+    if (status) taskFields.status = status;
+
+    try {
+
+    let updatedTask = await Task.findOneAndUpdate(
+        { _id : req.params.id}, 
+        { $set : taskFields },
+        {new: true, upsert: true},
+        );
+    
+    return res.json(updatedTask);
+
+
+    } catch (error) {
+        console.error(error.message);
+        res.status(500).send('Server Error');
+    }
+
+
+});
+
 
 
 

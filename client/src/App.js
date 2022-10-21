@@ -6,6 +6,8 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
+import CreateProfile from './components/profile-forms/CreateProfile';
+
 // Redux
 import { Provider } from 'react-redux';
 import store from './store';
@@ -38,6 +40,7 @@ const App = () => {
           <Route exact path='/register' element={<Register />} />
           <Route exact path='/login' element={<Login />} />
           <Route exact path='/dashboard' element={<Dashboard />} />
+          <Route exact path='/create-profile' element={<CreateProfile />} />
         </Routes>    
       </section>
     </Fragment>

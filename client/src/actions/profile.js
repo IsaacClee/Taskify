@@ -4,7 +4,9 @@ import { Navigate } from 'react-router-dom';
 
 import {
     GET_PROFILE,
-    PROFILE_ERROR
+    PROFILE_ERROR,
+    GET_PROFILES,
+    CLEAR_PROFILE
 } from './types';
 
 // Get Current users profile
@@ -58,3 +60,38 @@ export const createProfile = (formData, history) => async dispatch => {
 
     }
 }
+
+// Get all profiles
+export const getProfiles = () => async dispatch => {
+    dispatch({ type: CLEAR_PROFILE });
+    try {
+        const res = await axios.get('/api/profile');
+
+        dispatch({
+            type: GET_PROFILES,
+            payload: res.data
+        })
+    } catch (error) {
+        dispatch({
+            type: PROFILE_ERROR,
+            payload: { msg: error.response.statusText, status: error.response.status }
+        });
+    }
+};
+
+// Get all profile by ID
+export const getProfileByID = userID => async dispatch => {
+    try {
+        const res = await axios.get(`/api/profile/user/${userID}`);
+
+        dispatch({
+            type: GET_PROFILE,
+            payload: res.data
+        })
+    } catch (error) {
+        dispatch({
+            type: PROFILE_ERROR,
+            payload: { msg: error.response.statusText, status: error.response.status }
+        });
+    }
+};

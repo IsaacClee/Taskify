@@ -7,7 +7,8 @@ import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 import Dashboard from './components/dashboard/Dashboard';
 import CreateProfile from './components/profile-forms/CreateProfile';
-import Profiles from './components/profiles/Profiles'
+import Profiles from './components/profiles/Profiles';
+import Tasks from './components/tasks/Tasks';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -43,6 +44,7 @@ const App = () => {
           <Route exact path='/dashboard' element={<Dashboard />} />
           <Route exact path='/profiles' element={<Profiles />}/>
           <Route exact path='/create-profile' element={<CreateProfile />} />
+          <Route exact path='/tasks' element={<Tasks />} />
         </Routes>    
       </section>
     </Fragment>

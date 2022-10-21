@@ -13,7 +13,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
         <Link to="/profiles"><i className="fa fa-plug"></i> Team Members</Link>
       </li>
       <li>
-        <Link to="/posts">Tasks</Link>
+        <Link to="/tasks">Tasks</Link>
       </li>
       <li>
         <Link to="/dashboard">

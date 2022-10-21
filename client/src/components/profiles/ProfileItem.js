@@ -8,16 +8,18 @@ profile:{
     status,
     company,
     location,
+    bio,
     skills
 }
 }) => {
 
-  return <div className="profile bg-light">
+  return <div className="profile bg-dark">
     <img src={avatar} alt="" className="round-img" />
         <div>
             <h2>{name}</h2>
             <p>{status} with {company && <span>{company}</span>}</p>
             <p className="my-1">{location && <span>{location}</span>}</p>
+            <p>About me: {bio && <span>{bio}</span>}</p>
         </div>
         <ul>
             <li>Skills:</li>

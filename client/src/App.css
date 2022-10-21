@@ -373,6 +373,7 @@ button {
   margin-bottom: 1rem;
   border: 0.2rem black solid;
   border-radius: 7rem;
+  opacity: 0.8;
 }
 
 /* Profile Page */

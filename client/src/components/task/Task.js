@@ -14,7 +14,9 @@ const Task = ({ getTask, task: { task, loading }, match }) => {
     }, [getTask, id]);
 
   return (
-    <div>Task</div>
+    <Fragment>
+      test
+    </Fragment>
   )
 }
 

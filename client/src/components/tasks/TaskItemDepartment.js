@@ -13,7 +13,7 @@ const TaskItemDepartment = ({ task: {_id, title, user, status, owner, department
         <div className="grid-item-type">{status}</div>  
         <div className="grid-item-type">{owner}</div>
         <div className="grid-item-type"><Moment format='MM/DD/YYYY'>{createdate}</Moment></div>  
-        <div className="grid-item-type"><Link to={`/task/${_id}`}><i className="fa fa-file"></i></Link></div>
+        <div className="grid-item-type"><Link to={`/tasks/${_id}`}><i className="fa fa-file"></i></Link></div>
         <div className="grid-item-type"><i className='fas fa-times bg-danger' /></div>
      </div>
   </Fragment>

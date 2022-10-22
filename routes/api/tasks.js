@@ -83,7 +83,7 @@ router.get('/:id', auth, async (req, res) => {
 // @route  DELETE api/tasks/:id
 // @desc   Delete a task
 // @access Public
-router.delete('/:id',  async (req, res) => {
+router.delete('/:id', auth, async (req, res) => {
     try {
         const task = await Task.findById(req.params.id);
 

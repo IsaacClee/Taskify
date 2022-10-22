@@ -72,7 +72,7 @@ const Tasks = ({ getTasks, task: { tasks, loading } }) => {
         <h1 className="large text-primary">
             Owner Tasks:
         </h1>
-        <p className="lead"><i className="fas fa-tasks"></i> Team Effort! Many hands equals light work.</p>
+        <p className="lead"><i className="fas fa-tasks"></i> People power. Strength comes from within.</p>
         <div className="grid-container-type">
             <div className="grid-item-type bg-light">Title</div>
             <div className="grid-item-type bg-light">Due Date</div>

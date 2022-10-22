@@ -19,8 +19,10 @@ const Tasks = ({ getTasks, task: { tasks, loading } }) => {
             All Tasks:
         </h1>
         <p className="lead"><i className="fas fa-tasks"></i> Let's knock it out!</p>
+
         <input className='task-table-search' type="text" placeholder="Search by Title"></input>
         <input className='task-table-search' type="text" placeholder="Search by Status"></input>
+        
         <div className="grid-container">
         <div className="grid-item bg-light">Title</div>
         <div className="grid-item bg-light">Due Date</div>

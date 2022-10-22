@@ -91,6 +91,13 @@ th {
   margin: 5rem;
 }
 
+.task-table-search {
+  display: block;
+  width: 15rem;
+  height: 2rem;
+  margin: 2rem 0rem;
+}
+
 
 
 /* Utilities */

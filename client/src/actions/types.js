@@ -14,6 +14,11 @@ export const CLEAR_PROFILE = 'CLEAR_PROFILE';
 export const ACCOUNT_DELETED  = 'ACCOUNT_DELETED';
 export const GET_TASKS = 'GET_TASKS';
 export const TASK_ERROR  = 'TASK_ERROR';
+export const DELETE_TASK = 'DELETE_TASK';
+export const ADD_TASK = 'ADD_TASK';
+export const GET_TASK = 'GET_TASK';
+
+
 
 
 

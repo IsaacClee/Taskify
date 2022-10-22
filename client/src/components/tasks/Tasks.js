@@ -6,11 +6,15 @@ import TaskItem from './TaskItem';
 import TaskItemUser from './TaskItemUser';
 import TaskItemDepartment from './TaskItemDepartment';
 import { getTasks } from '../../actions/tasks';
+import TaskForm from './TaskForm';
+import { useParams } from "react-router-dom";
 
 const Tasks = ({ getTasks, task: { tasks, loading } }) => {
+    const { id } = useParams();
+
     useEffect(() => {
-        getTasks();
-    }, [getTasks]);
+        getTasks(id);
+    }, [getTasks, id]);
 
 
   return loading ? <Spinner /> : <Fragment>
@@ -19,7 +23,6 @@ const Tasks = ({ getTasks, task: { tasks, loading } }) => {
             All Tasks:
         </h1>
         <p className="lead"><i className="fas fa-tasks"></i> Let's knock it out!</p>
-
         <input className='task-table-search' type="text" placeholder="Search by Title"></input>
         <input className='task-table-search' type="text" placeholder="Search by Status"></input>
         

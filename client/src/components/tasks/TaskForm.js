@@ -33,8 +33,8 @@ const TaskForm = ({ addTask }) => {
 
 
   return (
-    <div>
- <h1 className="large text-primary">
+     <div>
+       <h1 className="large text-primary">
         Create a New Task
       </h1>
       <p className="lead">
@@ -80,7 +80,6 @@ const TaskForm = ({ addTask }) => {
           <small className="form-text">Add a Due Date if required.</small>
         </div>
         <input type="submit" className="btn btn-primary my-1" />
-        <a className="btn btn-light my-1" href="dashboard.html">Go Back</a>
       </form>
     </div>
   )

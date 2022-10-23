@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 
 
 const TaskItemDepartment = ({ task: {_id, title, user, status, department, duedate, createdate}}) => {
-  return !department ? <Fragment></Fragment> : <Fragment>
+  return !department || department === '' ? <Fragment></Fragment> : <Fragment>
       <div className="grid-container">
         <div className="grid-item">{title}</div>
         <div className="grid-item">{duedate}</div>

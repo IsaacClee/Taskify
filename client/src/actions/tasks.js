@@ -5,7 +5,8 @@ import {
     GET_TASKS,
     TASK_ERROR,
     ADD_TASK,
-    GET_TASK
+    GET_TASK,
+    UPDATE_TASK
 } from './types';
 
 // Get Tasks
@@ -72,6 +73,36 @@ export const addTask = (formData) => async (dispatch) => {
         dispatch(setAlert('Only the task created may remove that task.', 'danger'));
     }
 };
+
+// Update Task
+export const updateTask = (formData, taskId) => async (dispatch) => {
+    const config = {
+        headers: {
+            'Content-Type' : 'application/json'
+        }
+    }
+
+    try {
+        const res = await axios.put(`/api/tasks/${taskId}`, formData, config);
+
+        dispatch({
+            type: UPDATE_TASK,
+            payload: res.data
+        });
+
+
+        dispatch(setAlert('Task Updated', 'success'));
+    } catch (error) {
+        dispatch({
+            type: TASK_ERROR,
+            payload: { msg: error.response.statusText, status: error.response.status }
+        });
+        dispatch(setAlert('Task failed to update.', 'danger'));
+    }
+};
+
+
+
 
 
 

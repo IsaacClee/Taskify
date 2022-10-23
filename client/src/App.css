@@ -312,6 +312,7 @@ put
   display: block;
   margin-top: 0.3rem;
   color: #888;
+  margin-bottom: 1rem;
 }
 
 .form input[type='text'],

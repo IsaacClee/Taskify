@@ -3,7 +3,8 @@ import {
     TASK_ERROR,
     DELETE_TASK,
     ADD_TASK,
-    GET_TASK
+    GET_TASK,
+    UPDATE_TASK
 } from '../actions/types';
 
 
@@ -25,6 +26,7 @@ function taskReducer(state = initialState, action) {
             loading: false
         };
         case GET_TASK:
+        case UPDATE_TASK:
             return {
             ...state,
             task: payload,

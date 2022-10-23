@@ -39,7 +39,7 @@ const Tasks = ({ getTasks, task: { tasks, loading } }) => {
         {/* All Tasks */}
 
         <h1 className="large text-primary">
-            All Tasks:
+            All Tasks: 
         </h1>
         <p className="lead"><i className="fas fa-tasks"></i> Let's knock it out!</p>
         

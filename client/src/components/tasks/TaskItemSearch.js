@@ -12,7 +12,7 @@ const TaskItem = ({
   auth,
   search,
   task: {_id, title, user, status, owner, department, duedate, createdate}}) => {
-  return !auth.loading && user === auth.user._id && search.toUpperCase() === status || !auth.loading && user === auth.user._id && search.toUpperCase() === '' ? <Fragment>
+  return !auth.loading && search.toUpperCase() === status || !auth.loading && search.toUpperCase() === '' ? <Fragment>
       <div className="grid-container">
         <div className="grid-item bg-light">{title}</div>
         <div className="grid-item">{duedate}</div>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const ProfileItem = ({ 
 profile:{ 
-    user: { _id,name, avatar}, 
+    user: { _id, name, avatar}, 
     status,
     company,
     location,
@@ -36,4 +36,4 @@ ProfileItem.propTypes = {
     profile: PropTypes.object.isRequired
 }
 
-export default ProfileItem
+export default ProfileItem;

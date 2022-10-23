@@ -12,7 +12,7 @@ const Task = ({ updateTask, getTask, task: { task, loading }, match }) => {
     const { id } = useParams();
 
     useEffect(() => {
-        getTask(id)
+        getTask(id);
     }, [getTask, id]);
 
     const [formData, setFormData] = useState({
@@ -21,7 +21,6 @@ const Task = ({ updateTask, getTask, task: { task, loading }, match }) => {
       status: '',
       department: '',
       duedate: ''
-
     });
   
     const {
@@ -40,13 +39,16 @@ const Task = ({ updateTask, getTask, task: { task, loading }, match }) => {
         e.preventDefault();
         updateTask(formData, id);
     }
+
     
 
-  return (
+  return  loading || !task ? (
+    <Spinner />
+    ) : (
     <Fragment>
      <div>
        <h1 className="large text-primary">
-        Update a exsiting task
+        Update a existing task
       </h1>
       <p className="lead">
         <i className="fas fa-user-plus"></i> Fill out the form below:
@@ -63,7 +65,7 @@ const Task = ({ updateTask, getTask, task: { task, loading }, match }) => {
         </div>
         <div className="form-group">
           <select name="status" value={status} onChange={e => onChange(e)}>
-            <option value={task.status}>* Prior status: {task.status} </option>
+            <option value={task.status}>{task.status} </option>
             <option value="NEW">New</option>
             <option value="PLANNED">Planned</option>
             <option value="IN PROGRESS">In Progress</option>
@@ -73,7 +75,7 @@ const Task = ({ updateTask, getTask, task: { task, loading }, match }) => {
         </div>
         <div className="form-group">
           <select name="department" value={department} onChange={e => onChange(e)}>
-            <option value={task.department}>* Prior status: {task.department} </option>
+            <option value={task.department}>{task.department}</option>
             <option value="">No department</option>
             <option value="HR">HR</option>
             <option value="Development">Development</option>
@@ -96,7 +98,7 @@ const Task = ({ updateTask, getTask, task: { task, loading }, match }) => {
       </form>
     </div>
     </Fragment>
-  )
+    )
 }
 
 Task.propTypes = {

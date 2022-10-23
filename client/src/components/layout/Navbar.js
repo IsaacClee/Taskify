@@ -33,7 +33,6 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLinks = (
     <ul>
-    <li><Link to="/profiles"><i className="fa fa-plug"></i> Team Members</Link></li>
     <li><Link to="/register"><i className="fa fa-user-plus"></i> Create account</Link></li>
     <li><Link to="/login"><i className="fa fa-user-circle"></i> Login</Link></li>
     <li><a href="https://isaaclee.site"><i className="fa fa-paint-brush"></i> Creator</a></li>

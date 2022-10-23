@@ -42,7 +42,7 @@ export const deleteTask = (id) => async dispatch => {
             type: TASK_ERROR,
             payload: { msg: error.response.statusText, status: error.response.status }
         });
-        dispatch(setAlert('Task not removed', 'danger'));
+        dispatch(setAlert('Only the Task creator may remove this task.', 'danger'));
     }
 };
 
@@ -69,9 +69,12 @@ export const addTask = (formData) => async (dispatch) => {
             type: TASK_ERROR,
             payload: { msg: error.response.statusText, status: error.response.status }
         });
-        dispatch(setAlert('Task not created', 'danger'));
+        dispatch(setAlert('Only the task created may remove that task.', 'danger'));
     }
 };
+
+
+
 
 // Get Task
 export const getTask = (id) => async dispatch => {

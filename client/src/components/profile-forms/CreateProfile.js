@@ -88,7 +88,7 @@ const CreateProfile = ({ createProfile, history }) => {
             Current Department ( example: HR or Application Development) </small>
         </div>
         <div className="form-group">
-          <input type="text" placeholder="Location" name="location"  value={location} onChange={e => onChange(e)} />
+          <input type="text" placeholder="Location" name="location" value={location} onChange={e => onChange(e)}  />
           <small className="form-text">City & state suggested (eg. Boston, MA)</small>
         </div>
         <div className="form-group">

@@ -51,6 +51,10 @@ th {
   width: 10rem;
 }
 
+button {
+  cursor: pointer;
+}
+
 
 .grid-container {
   display: grid;
@@ -92,10 +96,9 @@ th {
 }
 
 .task-table-search {
-  display: block;
   width: 15rem;
-  height: 2rem;
-  margin: 2rem 0rem;
+  height: 2.4rem;
+  margin: 2rem 1rem 2rem 0rem;
 }
 
 

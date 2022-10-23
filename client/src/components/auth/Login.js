@@ -11,6 +11,10 @@ const Login = ( { login, isAuthenticated }) => {
     password2: ''
   });  
 
+  if (isAuthenticated) {
+    return <Navigate to="/dashboard"  replace={true}/>;
+  }
+
   const { email, password} = formData;
 
   const onChange = e  => setFormData({ ...formData, [e.target.name]: e.target.value});
@@ -18,10 +22,6 @@ const Login = ( { login, isAuthenticated }) => {
   const onSubmit = async  e => {
     e.preventDefault();
     login(email, password);
-  }
-
-  if(isAuthenticated){
-    return <Navigate to='/dashboard'  replace={true}/>    
   }
 
 

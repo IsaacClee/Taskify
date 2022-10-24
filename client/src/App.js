@@ -10,6 +10,7 @@ import CreateProfile from './components/profile-forms/CreateProfile';
 import Profiles from './components/profiles/Profiles';
 import Tasks from './components/tasks/Tasks';
 import Task from './components/task/Task';
+import { LOGOUT } from './actions/types';
 
 
 // Redux

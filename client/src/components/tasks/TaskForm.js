@@ -77,7 +77,7 @@ const TaskForm = ({ addTask }) => {
         </div>
         <div className="form-group">
           <input type="text" placeholder="Due Date" name="duedate"  value={duedate} onChange={e => onChange(e)} />
-          <small className="form-text">Add a Due Date if required.</small>
+          <small className="form-text">Add a Due Date if required. Format: MM/DD/YYYY </small>
         </div>
         <input type="submit" className="btn btn-primary my-1" />
       </form>

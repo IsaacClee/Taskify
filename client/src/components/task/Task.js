@@ -91,7 +91,7 @@ const Task = ({ updateTask, getTask, task: { task, loading }, match }) => {
         </div>
         <div className="form-group">
           <input type="text" placeholder={task.duedate} name="duedate"  value={duedate} onChange={e => onChange(e)} />
-          <small className="form-text">Due Date: Add a Due Date if required.</small>
+          <small className="form-text">Due Date: Add a Due Date if required. Format: MM/DD/YYYY </small>
         </div>
         <input type="submit" className="btn btn-primary my-1" />
         <Link to="../../tasks" className="btn btn-light my-1">Go Back</Link>

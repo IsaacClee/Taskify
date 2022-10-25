@@ -124,6 +124,12 @@ a {
     -o-background-size: cover;
 }
 
+.showcase-welcome {
+    font-size: 6rem;
+    text-align: center;
+    margin: 14rem 0rem;
+}
+
 #info-banner {
     background: repeating-linear-gradient(
   -30deg,
@@ -277,6 +283,14 @@ a {
 
 .faststart {
     background: url(faststart.png) center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.taskify {
+    background: url(taskify.jpg) center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -486,6 +500,12 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 93% 97%, 85% 92% , 80% 87% , 75% 80
         clip-path: circle(60% at 50% 20%);
     }
 
+    .showcase-welcome {
+        font-size: 6rem;
+        text-align: center;
+        margin: 9rem 0rem;
+    }
+
     .item-box {
         height: 100%;
         width: 50%;
@@ -659,6 +679,13 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 93% 97%, 85% 92% , 80% 87% , 75% 80
     background-position: center center;
         clip-path: circle(70% at 50% -20%);
     }
+
+    .showcase-welcome {
+        font-size: 7rem;
+        text-align: center;
+        margin: 14rem 0rem;
+    }
+
     .item-box {
         height: 100%;
     }
@@ -962,7 +989,7 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 93% 97%, 85% 92% , 80% 87% , 75% 80
 
 .projects-box {
     width: 90vw;
-    height: auto;
+    height: 80vh;
     margin: 10vh auto;
     color: #121246;
     display: flex;
@@ -1018,6 +1045,14 @@ clip-path: polygon(0% 0%, 100% 0%, 100% 96%, 93% 97%, 85% 92% , 80% 87% , 75% 80
 
 .desmond {
     background: url(desmond-capture.jpg) center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.taskify {
+    background: url(taskify.jpg) center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

@@ -3,7 +3,9 @@ import { connect } from 'react-redux';
 import { Link, Navigate } from 'react-router-dom';
 import { setAlert } from '../../actions/alert';
 import { register } from '../../actions/auth';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import TestPasswordMatchValidation from '../testing/TestPasswordMatchValidation';
+
 
 const Register = ({ setAlert, register, isAuthenticated }) => {
   const [formData, setFormData ] = useState({
@@ -18,6 +20,14 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   }
 
   const { name, email, password, password2} = formData;
+
+
+ 
+
+  // Triggers Password does not match
+
+
+
 
   const onChange = e  => setFormData({ ...formData, [e.target.name]: e.target.value});
   
@@ -34,9 +44,13 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
     return <Navigate to='/dashboard'  replace={true}/>
   }
 
+
+  
   return (
 
     <Fragment>
+
+      
     <h1 className="large text-primary">Sign Up</h1>
       <p className="lead"><i className="fas fa-user"></i> Create Your Account</p>
       <form className="form" onSubmit={e => onSubmit(e)}>
@@ -77,6 +91,8 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
       <p className="my-1">
         Already have an account? <Link to="/login">Sign In</Link>
       </p>
+      {/* Below is a testing component for password validation in the registor user form. Remove comment bracket to access test. A testing buttom will appear in the UI for directly testing of the UI message systems */}
+      {/* <TestPasswordMatchValidation /> */}
     </Fragment>
     )
 };
@@ -90,5 +106,7 @@ Register.propTypes = {
 const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated 
 });
+
+
 
 export default connect(mapStateToProps, { setAlert, register })(Register);
